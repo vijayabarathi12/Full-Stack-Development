@@ -1,0 +1,81 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            body{
+                color:azure;
+                font-size: larger;
+            }
+        </style>
+    </head>
+    <body bgcolor="pink" style="background-image: url('img.jpg'); background-repeat: no-repeat; background-attachment: fixed;background-size: 100% 100%;">
+        <div class="head">
+            <h1 style="color:white;"><centre>Registration Form</centre></h1>
+        </div>
+        <table border="0" align="centre">
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td><label>Department</label></td>
+                <td>
+                    <select><option>Select Options</option>
+                            <option>B.Tech AI&DS</option>
+                            <option>B.Tech IT</option>
+                            <option>B.E CSE</option>
+                            <option>B.E EEE</option>
+                            <option>B.E ECE</option>
+                            <option>B.E Mech</option>
+                            <option>B.E Civil</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Year</label></td>
+                <td><input type="radio" name="year" value="one">1st Year
+                <input type="radio" name="year" value="two">2nd Year
+                <input type="radio" name="year" value="third">3rd Year
+                <input type="radio" name="year" value="final">Final Year</td>
+            </tr>
+            <tr>
+                <td><label>College</label></td>
+                <td><input type="text" placeholder="Enter your college name"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="email" placeholder="abc@gmail.com"></td>
+            </tr>
+            <tr>
+                <td><label>Phone Number</label></td>
+                <td><input type="tel" placeholder="Enter Phone Number"></td>
+            </tr>
+            <tr>
+                <td><label>Address</label></td>
+                <td><textarea rows="4" cols="36" placeholder="Enter your address"></textarea></td>
+            </tr>
+            <tr>
+                <td><label>Date of Event</label></td>
+                <td><input type="datetime-local"></td>
+            </tr>
+            <tr>
+                <td><label>Number of Events interested</label></td>
+                <td><input type="range"></td>
+            </tr>
+            <tr>
+                <td><label>Event List</label></td>
+                <td>
+                    <input type="checkbox"><label>Paper Presentation</label>
+                    <input type="checkbox"><label>Technical Quiz</label>
+                    <input type="checkbox"><label>Debugging</label>
+                    <input type="checkbox"><label>Workshops</label>
+                    <input type="checkbox"><label>Coding Challenge</label>
+                </td>
+            </tr>
+            <tr>
+                <td colsspan="2"><centre><input type="submit"></centre></td>
+            </tr>
+        </table>
+    </body>
+</html>
