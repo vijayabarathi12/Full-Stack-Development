@@ -1,0 +1,8 @@
+1) Basic Registration Form
+    A basic registration form created using HTML and CSS
+2) Box Model
+    A simple illustration for box model.
+3) Blocks
+    A simple aarragement for block display. 
+4) Cards
+    A simple arrangement of deck cards using display property.
