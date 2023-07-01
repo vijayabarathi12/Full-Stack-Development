@@ -1,0 +1,2 @@
+Write a Javascript function that will deal with pop-up-blocking browsers to detect whether pop-up was blocked or not. 
+Test this function with some HTML page which will redirect to an error page informing that pop-up was disabled.
