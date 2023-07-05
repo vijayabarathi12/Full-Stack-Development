@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function TodoList() {
+      const [tasks, setTasks] = useState([]);
+      const [inputValue, setInputValue] = useState('');
+
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        if (inputValue) {
+          setTasks([...tasks, inputValue]);
+          setInputValue('');
+        }
+      };
+
+      const handleDelete = (index) => {
+        const newTasks = [...tasks];
+        newTasks.splice(index, 1);
+        setTasks(newTasks);
+      };
+
+      return (
+        <div>
+          <h1>Todo List</h1> 
+          <form onSubmit={handleSubmit}>
+            <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+            <button>Add Task</button>
+          </form>
+          <ol>
+            {tasks.map((task, index) => (
+  <li key={index}>
+    <input type="checkbox" />
+    {task}
+    <button onClick={() => handleDelete(index)}>Delete</button>
+  </li>
+))}
+          </ol>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<TodoList />, document.getElementById('root'));
+  </script>
+</body>
+</html>

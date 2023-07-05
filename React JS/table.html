@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Marks Table</title>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="tablemarks"> </div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [students, setStudents] = useState([
+        { name: 'Viji', id: 1, math: 85, science: 90, english: 75 },
+        { name: 'Loki', id: 2, math: 80, science: 95, english: 90 },
+        { name: 'Arjun', id: 3, math: 95, science: 80, english: 85 },
+      ]);
+
+      const getTotalMarks = (student) => {
+        return student.math + student.science + student.english;
+      };
+
+      return (
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Math</th>
+                <th>Science</th>
+                <th>English</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {students.map((student) => (
+                <tr key={student.id}>
+                  <td>{student.name}</td>
+                  <td>{student.id}</td>
+                  <td>{student.math}</td>
+                  <td>{student.science}</td>
+                  <td>{student.english}</td>
+                  <td>{getTotalMarks(student)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('tablemarks'));
+  </script>
+</body>
+</html>
