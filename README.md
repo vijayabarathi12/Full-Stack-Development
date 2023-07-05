@@ -1,2 +1,2 @@
 # Full-Stack-Development
-Basic web programs , ReactJS and Typescript
+Basic web programs using HTML , CSS and JavaScript
