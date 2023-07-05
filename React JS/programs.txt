@@ -1,0 +1,20 @@
+1) Create a React component that displays the Markdetails of the students scored in different subjects. 
+Also use props to dynamically find the total marks gained by the students.
+
+2) Create a todo list application using React that allows the user to add, delete, and mark items as complete. 
+Implement a feature that allows the user to filter the list by completed items, active items, or all items.
+
+3) Build a weather app using React that allows the user to enter a location and displays the current weather conditions for that location, such as temperature, humidity, wind speed, and precipitation.
+
+4) Image Slider using React JS
+Write a React code to create an image slide, where users can view multiple images with next/previous buttons. Additionally, there is also an option to select an image from any index of the list through a click-on option circle.
+The following are the steps to create an image slider in React JS:
+      1.	Declare array of objects with id and image url.
+      2.	For pre/next functionality, we decrement/increment count of the index of active image.
+      3 .	Update active image index with clicked option.
+
+5)Build a Search filter in React
+Following are the steps to create a Search filter using React JS:
+      1.	Declare React states for search input values.
+      2.	Create HTML input text for entering search term and update state in onChange function.
+      3.	Add Array.filter() on list of items with search term value.
